@@ -1,0 +1,72 @@
+type Query {
+  market(id: ID!): Market
+}
+
+type Market {
+    id: ID!
+    name: String!
+    resolver: Resolver!
+    outcomes: [Outcome]
+}
+
+type Outcome {
+    id: ID!
+    name: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+type Bid {
+    user: ID!
+    bidTargetPriceQuantity: BidTargetPriceQuantity!
+}
+
+type BidTarget {
+    outcomeId: ID!
+    isYes: Boolean!
+}
+
+type BidTargetPriceQuantity {
+    bidTarget: BidTarget!
+    quantity: Int!
+    price: Price!
+}
+
+type BidTargetPriceQuantityMapping {
+    bidTarget: BidTarget!
+    priceQuantities: [PriceQuantity]!
+}
+
+type PriceQuantity {
+    price: Price!
+    quantity: Int!
+}
+
+type OrderBook {
+    mappings: [OutcomePriceQuantityMapping]
+}
+
+type OutcomePriceQuantityMapping {
+    yes: BidTargetPriceQuantityMapping
+    no: BidTargetPriceQuantityMapping
+    outcomeId: ID!
+}
+
+type Price {
+    amount: Float!
+    currency: Currency!
+}
+
+enum Currency {
+    BTC
+    ICP
+    USDC
+    CYCLES
+}
+
+type Resolver {
+    id: ID!
+}
