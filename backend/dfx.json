@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "canisters": {
+      "backend": {
+        "type": "custom",
+        "candid": "src/backend/src/backend.did",
+        "wasm": "target/wasm32-unknown-unknown/release/backend.wasm",
+        "build": "cargo build --release --target wasm32-unknown-unknown --package backend"
+      }
+    }
+  }

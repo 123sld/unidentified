@@ -1,0 +1,16 @@
+[package]
+
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+
+[lib]
+path = "src/main.rs"
+
+[dependencies]
+ic-cdk = "0.6.1"
+ic-cdk-macros = "0.6.1"
+
+[profile.release]
+lto = true
