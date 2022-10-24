@@ -27,7 +27,6 @@ var markets = [
         "no_price": 98
       }
     ]
-  
   },
   {
     "id": 1234,
@@ -44,14 +43,10 @@ var markets = [
         "no_price": 63
       }
     ]
-  
   }
   ];
 
-
 function App() {
-
-
   return (
     <div>
       <tbody>
@@ -65,7 +60,7 @@ function App() {
             <td>{markets.name}</td>
                 {markets.outcomes.map((outcomes, index) => (
                     <><td>{outcomes.name}</td><td>{outcomes.yes_price}</td><td>{outcomes.no_price}</td></>
-                ))}   
+                ))}
             <td>{markets.outcomes.yes_price}</td>
           </tr>
         ))}
@@ -73,6 +68,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
