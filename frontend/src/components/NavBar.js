@@ -5,15 +5,15 @@ import Typography from '@mui/material/Typography';
 
 const NavBar = () => {
     return(
-            <div>
+        <div>
             <AppBar position="static">
-            <Toolbar>
-            <Typography variant="title" color="inherit">
-            Unidentified
-            </Typography>
-            </Toolbar>
+                <Toolbar>
+                    <Typography variant="title" color="inherit">
+                        Unidentified
+                    </Typography>
+                </Toolbar>
             </AppBar>
-            </div>
+        </div>
     )
 }
 

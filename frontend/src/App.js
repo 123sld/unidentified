@@ -88,27 +88,27 @@ var markets = [
 class App extends Component {
     render() {
         return (
-                <>
-                <NavBar />
-                <div>
-                <Grid container direction="row" spacing={1} alignItems="stretch">
+          <>
+            <NavBar />
+            <div>
+              <Grid container direction="row" spacing={1} alignItems="stretch">
                 {
-                    markets.map((market, index) => (
-                            <Grid item xs={4}>
+                  markets.map((market, index) => (
+                    <Grid item xs={4}>
                       <Card sx= {{ minWidth: 275 }} variant="outlined">
-                      <CardContent>
-                      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                      {market.category}
-                      </Typography>
-                      <Typography>{market.name}</Typography>
-                      </CardContent>
-                            </Card>
-                            </Grid>
-              ))
+                        <CardContent>
+                          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                            {market.category}
+                          </Typography>
+                          <Typography>{market.name}</Typography>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))
                 }
-            </Grid>
+              </Grid>
             </div>
-                </>
+          </>
         )
     }
 }
