@@ -261,13 +261,12 @@ class App extends Component {
           <NavBar />
           <div>
             <Grid container direction="column" padding={3} alignItems="center">
-              <Paper elevation={3} sx={{ maxWidth: 1700}}>
-                <Grid container  direction="row" spacing={1} alignItems="stretch" padding={1}>
+              <Paper elevation={3} sx={{ maxWidth: 1600}}>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }} alignItems="stretch" padding={1}>
                   {
                     markets.map((market, index) => (
-                      <Grid item xs={3} zeroMinWidth>
-                        <Paper elevation={2}>
-                          <Card sx={{ minHeight: 200 }} variant="outlined" >
+                      <Paper elevation={2} sx={{ m: .5}}>
+                          <Card sx={{ minHeight: 200, minWidth: 300, maxWidth: 300 }} variant="outlined">
                             <CardContent>
                               <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
                                 {market.category}
@@ -276,10 +275,9 @@ class App extends Component {
                             </CardContent>
                           </Card>
                         </Paper>
-                      </Grid>
                     ))
                   }
-                </Grid>
+                </Box>
               </Paper>
             </Grid>
           </div>
