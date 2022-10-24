@@ -266,12 +266,12 @@ class App extends Component {
                   {
                     markets.map((market, index) => (
                       <Paper elevation={2} sx={{ m: .5}}>
-                          <Card sx={{ minHeight: 200, minWidth: 300, maxWidth: 300 }} variant="outlined">
+                        <Card sx={{ minHeight: 200, maxHeight: 200, minWidth: 300, maxWidth: 300 }} variant="outlined">
                             <CardContent>
-                              <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
+                              <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
                                 {market.category}
                               </Typography>
-                              <Typography noWrap>{market.name}</Typography>
+                              <Typography noWrap variant="h6"> {market.name} </Typography>
                             </CardContent>
                           </Card>
                         </Paper>
