@@ -5,162 +5,253 @@ import NavBar from './components/NavBar'
 import { React, Component } from "react";
 
 var markets = [
-    {
-        "id": 1234,
-        "name": "Balance of Power",
-        "category": "Politics",
-        "outcomes": [
-            {
-                "name": "R House, R Senate",
-                "yes_price": 61,
-                "no_price": 39
-            },
-            {
-                "name": "R House, D Senate",
-                "yes_price": 37,
-                "no_price": 63
-            },
-            {
-                "name": "D House, R Senate",
-                "yes_price": 12,
-                "no_price": 88
-            },
-            {
-                "name": "D House, D Senate",
-                "yes_price": 2,
-                "no_price": 98
-            }
-        ]
-    },
-    {
-        "id": 1234,
-        "name": "Control of House",
-        "category": "Politics",
-        "outcomes": [
-            {
-                "name": "R House",
-                "yes_price": 61,
-                "no_price": 39
-            },
-            {
-                "name": "D Senate",
-                "yes_price": 37,
-                "no_price": 63
-            }
-        ]
-    },
-    {
-        "id": 5555,
-        "name": "Washington Capitals @ Pittsburgh Penguins 11/24/2022",
-        "category": "Sports",
-        "outcomes": [
-            {
-                "name": "Washington Capitals Win",
-                "yes_price": 50,
-                "no_price": 50
-            },
-            {
-                "name": "Pittsburgh Penguins Win",
-                "yes_price": 50,
-                "no_price": 50
-            }
-        ]
-    },
-    {
-        "id": 5555,
-        "name": "Colorado Avalanche @ Calgary Flames 12/24/2022",
-        "category": "Sports",
-        "outcomes": [
-            {
-                "name": "Colorado Avalanche Win",
-                "yes_price": 50,
-                "no_price": 50
-            },
-            {
-                "name": "Calgary Flames Win",
-                "yes_price": 50,
-                "no_price": 50
-            }
-        ]
-    },
-    {
-        "id": 1234,
-        "name": "Balance of Power",
-        "category": "Politics",
-        "outcomes": [
-            {
-                "name": "R House, R Senate",
-                "yes_price": 61,
-                "no_price": 39
-            },
-            {
-                "name": "R House, D Senate",
-                "yes_price": 37,
-                "no_price": 63
-            },
-            {
-                "name": "D House, R Senate",
-                "yes_price": 12,
-                "no_price": 88
-            },
-            {
-                "name": "D House, D Senate",
-                "yes_price": 2,
-                "no_price": 98
-            }
-        ]
-    },
-    {
-        "id": 1234,
-        "name": "Control of House",
-        "category": "Politics",
-        "outcomes": [
-            {
-                "name": "R House",
-                "yes_price": 61,
-                "no_price": 39
-            },
-            {
-                "name": "D Senate",
-                "yes_price": 37,
-                "no_price": 63
-            }
-        ]
-    },
-    {
-        "id": 5555,
-        "name": "Washington Capitals @ Pittsburgh Penguins 11/24/2022",
-        "category": "Sports",
-        "outcomes": [
-            {
-                "name": "Washington Capitals Win",
-                "yes_price": 50,
-                "no_price": 50
-            },
-            {
-                "name": "Pittsburgh Penguins Win",
-                "yes_price": 50,
-                "no_price": 50
-            }
-        ]
-    },
-    {
-        "id": 5555,
-        "name": "Colorado Avalanche @ Calgary Flames 12/24/2022",
-        "category": "Sports",
-        "outcomes": [
-            {
-                "name": "Colorado Avalanche Win",
-                "yes_price": 50,
-                "no_price": 50
-            },
-            {
-                "name": "Calgary Flames Win",
-                "yes_price": 50,
-                "no_price": 50
-            }
-        ]
-    }
+  {
+    "id": 1234,
+    "name": "Balance of Power",
+    "category": "Politics",
+    "outcomes": [
+      {
+        "name": "R House, R Senate",
+        "yes_price": 61,
+        "no_price": 39
+      },
+      {
+        "name": "R House, D Senate",
+        "yes_price": 37,
+        "no_price": 63
+      },
+      {
+        "name": "D House, R Senate",
+        "yes_price": 12,
+        "no_price": 88
+      },
+      {
+        "name": "D House, D Senate",
+        "yes_price": 2,
+        "no_price": 98
+      }
+    ]
+  },
+  {
+    "id": 1234,
+    "name": "Control of House",
+    "category": "Politics",
+    "outcomes": [
+      {
+        "name": "R House",
+        "yes_price": 61,
+        "no_price": 39
+      },
+      {
+        "name": "D Senate",
+        "yes_price": 37,
+        "no_price": 63
+      }
+    ]
+  },
+  {
+    "id": 5555,
+    "name": "Washington Capitals @ Pittsburgh Penguins 11/24/2022",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Washington Capitals Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Pittsburgh Penguins Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  },
+  {
+    "id": 5555,
+    "name": "Colorado Avalanche @ Calgary Flames 12/24/2022",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Colorado Avalanche Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Calgary Flames Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  },
+  {
+    "id": 1234,
+    "name": "Balance of Power",
+    "category": "Politics",
+    "outcomes": [
+      {
+        "name": "R House, R Senate",
+        "yes_price": 61,
+        "no_price": 39
+      },
+      {
+        "name": "R House, D Senate",
+        "yes_price": 37,
+        "no_price": 63
+      },
+      {
+        "name": "D House, R Senate",
+        "yes_price": 12,
+        "no_price": 88
+      },
+      {
+        "name": "D House, D Senate",
+        "yes_price": 2,
+        "no_price": 98
+      }
+    ]
+  },
+  {
+    "id": 1234,
+    "name": "Control of House",
+    "category": "Politics",
+    "outcomes": [
+      {
+        "name": "R House",
+        "yes_price": 61,
+        "no_price": 39
+      },
+      {
+        "name": "D Senate",
+        "yes_price": 37,
+        "no_price": 63
+      }
+    ]
+  },
+  {
+    "id": 5555,
+    "name": "Washington Capitals @ Pittsburgh Penguins 11/24/2022",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Washington Capitals Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Pittsburgh Penguins Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  },
+  {
+    "id": 5555,
+    "name": "Colorado Avalanche @ Calgary Flames 12/24/2022",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Colorado Avalanche Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Calgary Flames Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  },
+  {
+    "id": 5555,
+    "name": "Colorado Avalanche @ Calgary Flames 12/24/2022",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Colorado Avalanche Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Calgary Flames Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  },
+  {
+    "id": 8888,
+    "name": "Too many outcomes",
+    "category": "Percentage",
+    "outcomes": [
+      {
+        "name": "0-10",
+        "yes_price": 10,
+        "no_price": 90
+      },
+      {
+        "name": "10-20",
+        "yes_price": 10,
+        "no_price": 90
+      },
+      {
+        "name": "20-30",
+        "yes_price": 10,
+        "no_price": 90
+      },
+      {
+        "name": "30-40",
+        "yes_price": 10,
+        "no_price": 90
+      },
+      {
+        "name": "40-50",
+        "yes_price": 10,
+        "no_price": 90
+      },
+      {
+        "name": "50-60",
+        "yes_price": 1,
+        "no_price": 99
+      },
+      {
+        "name": "60-70",
+        "yes_price": 1,
+        "no_price": 99
+      },
+      {
+        "name": "70-80",
+        "yes_price": 30,
+        "no_price": 70
+      },
+      {
+        "name": "80-90",
+        "yes_price": 1,
+        "no_price": 99
+      },
+      {
+        "name": "90-100",
+        "yes_price": 20,
+        "no_price": 90
+      },
+    ]
+  },
+  {
+    "id": 2931,
+    "name": "Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title Insanely long title ",
+    "category": "Sports",
+    "outcomes": [
+      {
+        "name": "Colorado Avalanche Win",
+        "yes_price": 50,
+        "no_price": 50
+      },
+      {
+        "name": "Calgary Flames Win",
+        "yes_price": 50,
+        "no_price": 50
+      }
+    ]
+  }
 ];
 
 class App extends Component {
@@ -170,27 +261,27 @@ class App extends Component {
           <NavBar />
           <div>
             <Grid container direction="column" padding={3} alignItems="center">
-              <Paper elevation={3} sx={{ maxWidth: 1500}}>
-                <Grid container  direction="row" spacing={2} alignItems="stretch" padding={1}>
+              <Paper elevation={3} sx={{ maxWidth: 1700}}>
+                <Grid container  direction="row" spacing={1} alignItems="stretch" padding={1}>
                   {
                     markets.map((market, index) => (
                       <Grid item xs={3} zeroMinWidth>
                         <Paper elevation={2}>
-                        <Card sx={{ minHeight: 200 }} variant="outlined" >
-                          <CardContent>
-                            <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
-                              {market.category}
-                            </Typography>
-                            <Typography>{market.name}</Typography>
-                          </CardContent>
-                        </Card>
-                          </Paper>
+                          <Card sx={{ minHeight: 200 }} variant="outlined" >
+                            <CardContent>
+                              <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
+                                {market.category}
+                              </Typography>
+                              <Typography noWrap>{market.name}</Typography>
+                            </CardContent>
+                          </Card>
+                        </Paper>
                       </Grid>
                     ))
                   }
                 </Grid>
               </Paper>
-              </Grid>
+            </Grid>
           </div>
         </>
       )
