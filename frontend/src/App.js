@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { CardContent, Card, Typography, Grid } from '@mui/material';
+import { CardContent, CardHeader, Card, Typography, Grid, Box, Paper } from '@mui/material';
 import NavBar from './components/NavBar'
-import {React, Component } from "react";
+import { React, Component } from "react";
 
 var markets = [
     {
@@ -165,29 +165,35 @@ var markets = [
 
 class App extends Component {
     render() {
-        return (
-          <>
-            <NavBar />
-            <div>
-              <Grid container direction="row" spacing={2} alignItems="stretch" padding={1}>
-                {
-                  markets.map((market, index) => (
-                    <Grid item xs={3} zeroMinWidth>
-                      <Card sx= {{ minHeight: 200 }} variant="outlined" >
-                        <CardContent>
-                          <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
-                            {market.category}
-                          </Typography>
-                          <Typography>{market.name}</Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  ))
-                }
+      return (
+        <>
+          <NavBar />
+          <div>
+            <Grid container direction="column" padding={3} alignItems="center">
+              <Paper elevation={3} sx={{ maxWidth: 1500}}>
+                <Grid container  direction="row" spacing={2} alignItems="stretch" padding={1}>
+                  {
+                    markets.map((market, index) => (
+                      <Grid item xs={3} zeroMinWidth>
+                        <Paper elevation={2}>
+                        <Card sx={{ minHeight: 200 }} variant="outlined" >
+                          <CardContent>
+                            <Typography sx={{ fontSize: 14 }} color="text.secondary" noWrap>
+                              {market.category}
+                            </Typography>
+                            <Typography>{market.name}</Typography>
+                          </CardContent>
+                        </Card>
+                          </Paper>
+                      </Grid>
+                    ))
+                  }
+                </Grid>
+              </Paper>
               </Grid>
-            </div>
-          </>
-        )
+          </div>
+        </>
+      )
     }
 }
 
