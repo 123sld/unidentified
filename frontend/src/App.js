@@ -258,8 +258,8 @@ class App extends Component {
     render() {
       return (
         <>
-          <NavBar />
           <div>
+          <NavBar />
             <Grid container direction="column" padding={3} alignItems="center">
               <Paper elevation={3} sx={{ maxWidth: 1600}}>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }} alignItems="stretch" padding={1}>
